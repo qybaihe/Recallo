@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Recallo AI 学习助手</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary": "#1d00a5",
+                        "error": "#ffb4ab",
+                        "inverse-surface": "#e4e1e6",
+                        "surface-bright": "#39393c",
+                        "on-primary-fixed": "#0f0069",
+                        "tertiary-container": "#a44100",
+                        "tertiary-fixed-dim": "#ffb695",
+                        "tertiary-fixed": "#ffdbcc",
+                        "on-tertiary-container": "#ffd2be",
+                        "on-tertiary": "#571f00",
+                        "surface-variant": "#353438",
+                        "surface-container-low": "#1b1b1e",
+                        "secondary-fixed": "#eaddff",
+                        "secondary": "#d2bbff",
+                        "on-secondary-container": "#c9aeff",
+                        "on-tertiary-fixed": "#351000",
+                        "primary-container": "#4f46e5",
+                        "on-surface": "#e4e1e6",
+                        "on-secondary": "#3f008e",
+                        "outline-variant": "#464555",
+                        "on-secondary-fixed": "#25005a",
+                        "surface-tint": "#c3c0ff",
+                        "surface-dim": "#131316",
+                        "on-error-container": "#ffdad6",
+                        "error-container": "#93000a",
+                        "primary-fixed": "#e2dfff",
+                        "inverse-primary": "#4d44e3",
+                        "on-error": "#690005",
+                        "on-primary-container": "#dad7ff",
+                        "outline": "#918fa1",
+                        "on-tertiary-fixed-variant": "#7b2f00",
+                        "secondary-container": "#6001d1",
+                        "inverse-on-surface": "#303033",
+                        "surface-container-high": "#2a2a2d",
+                        "on-secondary-fixed-variant": "#5a00c6",
+                        "on-surface-variant": "#c7c4d8",
+                        "on-background": "#e4e1e6",
+                        "surface-container": "#1f1f22",
+                        "surface-container-lowest": "#0e0e11",
+                        "surface": "#131316",
+                        "primary-fixed-dim": "#c3c0ff",
+                        "background": "#131316",
+                        "tertiary": "#ffb695",
+                        "surface-container-highest": "#353438",
+                        "primary": "#c3c0ff",
+                        "secondary-fixed-dim": "#d2bbff",
+                        "on-primary-fixed-variant": "#3323cc"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-effect {
+            background: rgba(27, 27, 30, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(70, 69, 85, 0.15);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #131316;
+            color: #e4e1e6;
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#131316]/60 backdrop-blur-xl border-b border-white/10 flex items-center justify-between px-6 h-16 shadow-2xl shadow-black/40">
+<button class="hover:opacity-80 transition-opacity scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[#E4E1E6]" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-['Manrope'] font-semibold tracking-tight text-xl font-bold bg-gradient-to-r from-[#4F46E5] to-[#6001D1] bg-clip-text text-transparent">AI 导师</h1>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-[#4F46E5]/30">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="minimalist 3d avatar of a young male student with glasses and a friendly expression on a soft purple background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFqlUDNie1uBl24gEQVvYZk3VTG3DXBqlUdaBD6GhQQiSYoCTA8A1yRpYVBTnpaza66ZgNcaU3nN60BA4ZCpfhIuU4HSlr6vfrdNaqcmTT7PgvvOYGfpKcX8KUTjIje-6FHrcLH-DD3iBddGAhfnnOLOimYSmEIDJuUKTgBZT0aa3ix-0qefBKR-zxJJlElEWNC11JlWHV9r2Fqtr3Lw8qVNmCaHrGrrTGd0RfLHARzdbqsyh_FO3VpgpWDxWBCINdpEzIvAmLLyc"/>
+</div>
+</header>
+<main class="pt-24 px-5 space-y-6">
+<!-- Review Suggestion Card -->
+<section class="glass-effect rounded-2xl p-5 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-[#4F46E5]/10 blur-3xl -mr-16 -mt-16"></div>
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-tertiary" data-icon="insights">insights</span>
+<h2 class="text-on-surface font-semibold text-base">遗忘曲线预警</h2>
+</div>
+<p class="text-on-surface-variant text-sm mb-4 leading-relaxed">根据你的学习记忆轨迹，建议今日重点突破：</p>
+<div class="flex gap-2">
+<span class="px-4 py-1.5 rounded-full bg-primary-container/20 text-primary text-xs font-medium border border-primary/20">线性代数</span>
+<span class="px-4 py-1.5 rounded-full bg-secondary-container/20 text-secondary text-xs font-medium border border-secondary/20">英语听力</span>
+</div>
+</section>
+<!-- Quick Action Grid -->
+<div class="grid grid-cols-2 gap-4">
+<!-- Wrong Questions Card -->
+<div class="glass-effect rounded-2xl p-4 flex flex-col justify-between min-h-[110px]">
+<div class="flex justify-between items-start">
+<div class="p-2 bg-error-container/30 rounded-xl">
+<span class="material-symbols-outlined text-error text-xl" data-icon="assignment_late">assignment_late</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-sm" data-icon="chevron_right">chevron_right</span>
+</div>
+<div>
+<h3 class="text-on-surface text-sm font-medium mt-3">错题解析</h3>
+<p class="text-on-surface-variant text-xs mt-1">5 道待解析</p>
+</div>
+</div>
+<!-- AI Plan Adjust Card -->
+<div class="glass-effect rounded-2xl p-4 flex flex-col justify-between min-h-[110px] border-l-2 border-l-secondary">
+<div class="flex justify-between items-start">
+<div class="p-2 bg-secondary-container/30 rounded-xl">
+<span class="material-symbols-outlined text-secondary text-xl" data-icon="auto_awesome">auto_awesome</span>
+</div>
+</div>
+<div>
+<h3 class="text-on-surface text-sm font-medium mt-3">计划调整</h3>
+<p class="text-on-surface-variant text-[10px] leading-tight mt-1">Recallo AI 建议延长 20 分钟以覆盖新增考点</p>
+</div>
+</div>
+</div>
+<!-- Chat Area -->
+<div class="space-y-6 pt-2">
+<!-- User Question -->
+<div class="flex justify-end pl-12">
+<div class="bg-primary-container text-white px-5 py-3 rounded-2xl rounded-tr-none shadow-lg">
+<p class="text-sm leading-relaxed">帮我总结一下今天线性代数关于“矩阵秩”的核心知识点。</p>
+</div>
+</div>
+<!-- AI Response -->
+<div class="flex justify-start pr-8 gap-3">
+<div class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#4F46E5] to-[#6001D1] flex items-center justify-center shrink-0 shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-white text-sm" data-icon="psychology" style="font-variation-settings: 'FILL' 1;">psychology</span>
+</div>
+<div class="space-y-4 w-full">
+<div class="glass-effect rounded-2xl rounded-tl-none p-5 space-y-3">
+<h4 class="text-primary font-semibold text-sm">矩阵的秩 (Rank) 核心归纳：</h4>
+<ul class="text-on-surface-variant text-sm space-y-3 list-none">
+<li class="flex gap-2">
+<span class="text-primary font-bold">•</span>
+<span><strong class="text-on-surface">最高阶非零子式：</strong> 矩阵 A 的秩等于其非零子式的最高阶数。</span>
+</li>
+<li class="flex gap-2">
+<span class="text-primary font-bold">•</span>
+<span><strong class="text-on-surface">线性无关性：</strong> 矩阵的行秩与列秩相等，反映了向量组的最大线性无关组的大小。</span>
+</li>
+<li class="flex gap-2">
+<span class="text-primary font-bold">•</span>
+<span><strong class="text-on-surface">解的判定：</strong> 秩是判断齐次/非齐次线性方程组解的情况（唯一解、无穷解、无解）的关键指标。</span>
+</li>
+</ul>
+</div>
+<!-- AI Insight Actions -->
+<div class="flex flex-wrap gap-2">
+<button class="flex items-center gap-1.5 px-4 py-2 bg-surface-container-highest/50 border border-outline-variant/30 rounded-full text-xs text-on-surface hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-base" data-icon="account_tree">account_tree</span>
+                            生成思维导图
+                        </button>
+<button class="flex items-center gap-1.5 px-4 py-2 bg-surface-container-highest/50 border border-outline-variant/30 rounded-full text-xs text-on-surface hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-base" data-icon="search_check">search_check</span>
+                            查看关联错题
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Input Bar -->
+<div class="fixed bottom-24 left-0 w-full px-5 z-40">
+<div class="glass-effect rounded-full px-4 py-3 flex items-center gap-3 shadow-[0_10px_40px_rgba(79,70,229,0.15)]">
+<button class="text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full placeholder:text-on-surface-variant/50 text-on-surface" placeholder="向 Recallo AI 提问..." type="text"/>
+<button class="w-10 h-10 rounded-full bg-gradient-to-br from-[#4F46E5] to-[#6001D1] flex items-center justify-center shadow-[0_4px_15px_rgba(79,70,229,0.4)] text-white">
+<span class="material-symbols-outlined" data-icon="send" style="font-variation-settings: 'FILL' 1;">send</span>
+</button>
+</div>
+</div>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full rounded-t-[2rem] z-50 bg-[#1c1c1f]/60 backdrop-blur-2xl shadow-[0_-10px_40px_rgba(0,0,0,0.5)] flex justify-around items-center pt-3 pb-8 px-4 w-full">
+<!-- 学习 -->
+<a class="flex flex-col items-center justify-center text-[#C7C4D8] opacity-60 hover:text-[#E4E1E6] transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="auto_stories">auto_stories</span>
+<span class="font-['Inter'] text-[11px] leading-[1.6] mt-1">学习</span>
+</a>
+<!-- 复习 -->
+<a class="flex flex-col items-center justify-center text-[#C7C4D8] opacity-60 hover:text-[#E4E1E6] transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="psychology">psychology</span>
+<span class="font-['Inter'] text-[11px] leading-[1.6] mt-1">复习</span>
+</a>
+<!-- AI助手 (Active) -->
+<a class="flex flex-col items-center justify-center bg-gradient-to-br from-[#4F46E5] to-[#6001D1] text-white rounded-2xl px-5 py-2 scale-110 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="analytics" style="font-variation-settings: 'FILL' 1;">analytics</span>
+<span class="font-['Inter'] text-[11px] leading-[1.6] mt-1 font-semibold">分析</span>
+</a>
+<!-- 我的 -->
+<a class="flex flex-col items-center justify-center text-[#C7C4D8] opacity-60 hover:text-[#E4E1E6] transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="person">person</span>
+<span class="font-['Inter'] text-[11px] leading-[1.6] mt-1">我的</span>
+</a>
+</nav>
+</body></html>

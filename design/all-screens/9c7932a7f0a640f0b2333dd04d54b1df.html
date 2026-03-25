@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-container": "#4f46e5",
+              "inverse-surface": "#e4e1e6",
+              "on-tertiary-fixed": "#351000",
+              "surface": "#131316",
+              "on-surface-variant": "#c7c4d8",
+              "on-secondary-fixed-variant": "#5a00c6",
+              "outline": "#918fa1",
+              "surface-bright": "#39393c",
+              "on-primary-fixed": "#0f0069",
+              "tertiary": "#ffb695",
+              "surface-container-highest": "#353438",
+              "background": "#131316",
+              "on-primary-fixed-variant": "#3323cc",
+              "secondary-container": "#6001d1",
+              "on-error": "#690005",
+              "on-background": "#e4e1e6",
+              "tertiary-fixed-dim": "#ffb695",
+              "primary": "#c3c0ff",
+              "secondary": "#d2bbff",
+              "surface-container-high": "#2a2a2d",
+              "on-secondary-container": "#c9aeff",
+              "surface-variant": "#353438",
+              "on-tertiary": "#571f00",
+              "on-secondary-fixed": "#25005a",
+              "tertiary-container": "#a44100",
+              "on-tertiary-fixed-variant": "#7b2f00",
+              "error-container": "#93000a",
+              "secondary-fixed-dim": "#d2bbff",
+              "surface-tint": "#c3c0ff",
+              "outline-variant": "#464555",
+              "surface-container-low": "#1b1b1e",
+              "inverse-primary": "#4d44e3",
+              "tertiary-fixed": "#ffdbcc",
+              "secondary-fixed": "#eaddff",
+              "surface-container": "#1f1f22",
+              "error": "#ffb4ab",
+              "surface-container-lowest": "#0e0e11",
+              "primary-fixed": "#e2dfff",
+              "primary-fixed-dim": "#c3c0ff",
+              "on-surface": "#e4e1e6",
+              "surface-dim": "#131316",
+              "on-primary-container": "#dad7ff",
+              "on-primary": "#1d00a5",
+              "on-error-container": "#ffdad6",
+              "inverse-on-surface": "#303033",
+              "on-secondary": "#3f008e",
+              "on-tertiary-container": "#ffd2be"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-card {
+        background: rgba(27, 27, 30, 0.6);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(70, 69, 85, 0.15);
+      }
+      .cognitive-pulse {
+        background: linear-gradient(135deg, #4F46E5 0%, #6001D1 100%);
+      }
+      body {
+        background-color: #131316;
+        color: #e4e1e6;
+        -webkit-font-smoothing: antialiased;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body selection:bg-primary-container/30">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#131316]/60 backdrop-blur-xl border-b border-white/10 flex items-center justify-between px-6 h-16 shadow-[0px_20px_40px_rgba(0,0,0,0.4)]">
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-white/5 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-[#4F46E5]">arrow_back</span>
+</button>
+<h1 class="font-headline font-semibold tracking-tight text-lg text-[#E4E1E6]">Subject Details</h1>
+</div>
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-white/5 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-[#C7C4D8]">more_vert</span>
+</button>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-2xl mx-auto space-y-8">
+<!-- Subject Header Section -->
+<section class="relative">
+<div class="flex items-center justify-between gap-6">
+<div class="space-y-2">
+<span class="font-label text-xs font-medium uppercase tracking-widest text-primary">RECALLO CURATOR</span>
+<h2 class="font-headline text-4xl font-extrabold tracking-tight text-on-surface">高等数学</h2>
+<div class="flex items-center gap-3">
+<span class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-highest text-tertiary text-xs font-medium border border-outline-variant/20">
+<span class="material-symbols-outlined text-[14px]">history_edu</span>
+                            待复习 12
+                        </span>
+</div>
+</div>
+<!-- Circular Progress -->
+<div class="relative w-24 h-24 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90">
+<circle class="text-surface-container-high" cx="48" cy="48" fill="transparent" r="40" stroke="currentColor" stroke-width="6"></circle>
+<circle class="text-primary-container drop-shadow-[0_0_8px_rgba(79,70,229,0.6)]" cx="48" cy="48" fill="transparent" r="40" stroke="currentColor" stroke-dasharray="251.2" stroke-dashoffset="55.2" stroke-width="8"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="font-headline text-xl font-bold">78%</span>
+<span class="text-[10px] text-on-surface-variant uppercase">Mastery</span>
+</div>
+</div>
+</div>
+</section>
+<!-- AI Insight Section -->
+<section class="glass-card rounded-2xl p-6 relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-1 h-full bg-tertiary"></div>
+<div class="flex items-start justify-between mb-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">psychology</span>
+<h3 class="font-headline font-semibold text-on-surface">AI 薄弱点分析</h3>
+</div>
+<span class="text-[10px] font-bold text-tertiary bg-tertiary/10 px-2 py-0.5 rounded uppercase tracking-tighter">Insight</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-4">
+                根据最近三天的练习表现，你在 <span class="text-on-surface font-medium underline decoration-tertiary/40 underline-offset-4">分部积分法</span> 相关内容的准确率下降了 15%。建议加强对公式变形的练习。
+            </p>
+<div class="flex gap-2">
+<button class="px-4 py-2 rounded-full bg-surface-container-highest hover:bg-surface-container-high transition-colors text-xs font-medium text-on-surface flex items-center gap-1.5 border border-outline-variant/10">
+                    查看详细分析
+                    <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</section>
+<!-- Chapter Progress -->
+<section class="space-y-6">
+<div class="flex items-end justify-between">
+<h3 class="font-headline text-xl font-bold text-on-surface">章节进度</h3>
+<span class="text-xs text-on-surface-variant">共 8 个章节</span>
+</div>
+<div class="space-y-4">
+<!-- Chapter 1 -->
+<div class="glass-card rounded-2xl p-5 space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary-container/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-container">filter_1</span>
+</div>
+<div>
+<h4 class="font-semibold text-on-surface">第一章：函数与极限</h4>
+<p class="text-[11px] text-on-surface-variant">24 个知识点</p>
+</div>
+</div>
+<span class="text-sm font-headline font-bold text-primary">90%</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 90%"></div>
+</div>
+<!-- Nested Knowledge Points -->
+<div class="pt-2 grid grid-cols-1 gap-2">
+<div class="flex items-center justify-between py-2 px-3 rounded-lg bg-surface-container-lowest/40 border border-outline-variant/5">
+<span class="text-sm text-on-surface-variant">复合函数求导</span>
+<span class="material-symbols-outlined text-emerald-400 text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="flex items-center justify-between py-2 px-3 rounded-lg bg-surface-container-lowest/40 border border-outline-variant/5">
+<span class="text-sm text-on-surface-variant">两个重要极限</span>
+<span class="material-symbols-outlined text-primary text-[18px]">motion_photos_on</span>
+</div>
+</div>
+</div>
+<!-- Chapter 2 -->
+<div class="glass-card rounded-2xl p-5 space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-secondary-container/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary-container">filter_2</span>
+</div>
+<div>
+<h4 class="font-semibold text-on-surface">第二章：导数与微分</h4>
+<p class="text-[11px] text-on-surface-variant">18 个知识点</p>
+</div>
+</div>
+<span class="text-sm font-headline font-bold text-secondary">65%</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-secondary-container rounded-full" style="width: 65%"></div>
+</div>
+<!-- Nested Knowledge Points -->
+<div class="pt-2 grid grid-cols-1 gap-2">
+<div class="flex items-center justify-between py-2 px-3 rounded-lg bg-surface-container-lowest/40 border border-outline-variant/5">
+<span class="text-sm text-on-surface-variant">高阶导数概念</span>
+<span class="material-symbols-outlined text-tertiary text-[18px]">priority_high</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Action Area -->
+<div class="fixed bottom-0 w-full z-50 bg-[#131316]/60 backdrop-blur-xl border-t border-white/10 px-6 py-6 pb-8 shadow-[0px_-10px_30px_rgba(0,0,0,0.5)]">
+<button class="w-full h-14 cognitive-pulse rounded-full flex items-center justify-center gap-3 text-white font-headline font-bold tracking-wide active:scale-95 transition-all duration-200 shadow-[0_0_25px_rgba(79,70,229,0.5)]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bolt</span>
+            开始今日复习
+        </button>
+</div>
+<!-- Navigation Pivot (Invisible on desktop style but for structure) -->
+<nav class="hidden">
+<!-- BottomNavBar Logic hidden due to transactional focus of the "Review" button taking precedence -->
+</nav>
+</body></html>

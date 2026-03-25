@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Recallo - 学科详情</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "secondary-container": "#6001d1",
+                        "on-primary-container": "#dad7ff",
+                        "secondary-fixed": "#eaddff",
+                        "on-secondary": "#3f008e",
+                        "secondary": "#d2bbff",
+                        "on-tertiary-container": "#ffd2be",
+                        "on-surface-variant": "#c7c4d8",
+                        "surface-container-highest": "#353438",
+                        "surface-container-low": "#1b1b1e",
+                        "on-primary-fixed": "#0f0069",
+                        "on-primary": "#1d00a5",
+                        "on-secondary-fixed-variant": "#5a00c6",
+                        "on-secondary-fixed": "#25005a",
+                        "surface-tint": "#c3c0ff",
+                        "primary-fixed": "#e2dfff",
+                        "on-surface": "#e4e1e6",
+                        "inverse-primary": "#4d44e3",
+                        "surface-container-high": "#2a2a2d",
+                        "primary-container": "#4f46e5",
+                        "on-secondary-container": "#c9aeff",
+                        "error": "#ffb4ab",
+                        "outline": "#918fa1",
+                        "on-tertiary-fixed-variant": "#7b2f00",
+                        "on-primary-fixed-variant": "#3323cc",
+                        "tertiary-fixed-dim": "#ffb695",
+                        "surface": "#131316",
+                        "inverse-surface": "#e4e1e6",
+                        "tertiary": "#ffb695",
+                        "inverse-on-surface": "#303033",
+                        "surface-container": "#1f1f22",
+                        "tertiary-fixed": "#ffdbcc",
+                        "surface-container-lowest": "#0e0e11",
+                        "on-tertiary": "#571f00",
+                        "primary-fixed-dim": "#c3c0ff",
+                        "surface-bright": "#39393c",
+                        "on-tertiary-fixed": "#351000",
+                        "on-background": "#e4e1e6",
+                        "on-error-container": "#ffdad6",
+                        "error-container": "#93000a",
+                        "secondary-fixed-dim": "#d2bbff",
+                        "surface-variant": "#353438",
+                        "primary": "#c3c0ff",
+                        "background": "#131316",
+                        "outline-variant": "#464555",
+                        "on-error": "#690005",
+                        "surface-dim": "#131316",
+                        "tertiary-container": "#a44100"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(27, 27, 30, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(70, 69, 85, 0.15);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #4F46E5, #6001D1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .mastery-ring {
+            background: conic-gradient(#4F46E5 78%, transparent 0);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-white">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#131316]/60 backdrop-blur-xl flex items-center h-16 px-6 shadow-[0px_20px_40px_rgba(0,0,0,0.4)] bg-gradient-to-b from-[#4F46E5]/10 to-transparent">
+<button class="material-symbols-outlined text-[#4F46E5] hover:opacity-80 transition-opacity active:scale-90 duration-200">arrow_back</button>
+<h1 class="font-manrope font-semibold text-lg tracking-tight text-[#E4E1E6] ml-4">学科详情</h1>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-md mx-auto space-y-8">
+<!-- Header Section: Hero Mastery -->
+<section class="relative flex items-center justify-between">
+<div class="space-y-2">
+<span class="text-xs font-bold tracking-widest text-on-surface-variant uppercase opacity-60">MASTERING SUBJECT</span>
+<h2 class="text-4xl font-headline font-extrabold text-on-surface tracking-tighter">高等数学</h2>
+<div class="inline-flex items-center px-3 py-1 rounded-full bg-tertiary-container/20 border border-tertiary/10">
+<span class="material-symbols-outlined text-tertiary text-sm mr-1">notification_important</span>
+<span class="text-[10px] font-bold text-tertiary uppercase">12 个待复习</span>
+</div>
+</div>
+<div class="relative w-24 h-24 flex items-center justify-center">
+<div class="absolute inset-0 rounded-full border-4 border-surface-container-highest opacity-20"></div>
+<div class="absolute inset-0 rounded-full border-4 border-transparent mastery-ring rotate-180"></div>
+<div class="text-center">
+<span class="text-2xl font-headline font-bold text-on-surface">78</span>
+<span class="text-xs text-on-surface-variant">%</span>
+</div>
+<!-- Ambient Glow behind the ring -->
+<div class="absolute -z-10 w-16 h-16 bg-primary-container/30 blur-2xl rounded-full"></div>
+</div>
+</section>
+<!-- Insight Card: AI Analysis -->
+<section class="glass-panel p-6 rounded-xl relative overflow-hidden">
+<!-- Left Accent Border -->
+<div class="absolute left-0 top-0 bottom-0 w-[3px] bg-tertiary"></div>
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary">psychology</span>
+</div>
+<h3 class="font-headline font-semibold text-on-surface">AI 薄弱点分析</h3>
+</div>
+<p class="text-sm leading-relaxed text-on-surface-variant mb-4">
+                根据最近三天的练习表现，你在<span class="text-on-surface font-medium">「分部积分法」</span>相关内容的准确率下降了 <span class="text-error font-bold italic">15%</span>。建议加强对公式变形的练习。
+            </p>
+<button class="flex items-center text-xs font-bold text-[#4F46E5] group">
+                查看详细分析
+                <span class="material-symbols-outlined text-sm ml-1 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</section>
+<!-- Chapter Progress Section -->
+<section class="space-y-6">
+<div class="flex items-end justify-between px-1">
+<h3 class="text-xl font-headline font-bold text-on-surface">章节进度</h3>
+<span class="text-xs text-on-surface-variant font-medium">共 8 章</span>
+</div>
+<div class="space-y-6">
+<!-- Chapter 1 -->
+<div class="space-y-4">
+<div class="bg-surface-container-low p-5 rounded-xl">
+<div class="flex justify-between items-start mb-3">
+<div>
+<h4 class="font-semibold text-on-surface">第一章：函数与极限</h4>
+<p class="text-[10px] text-on-surface-variant mt-1">24 个知识点</p>
+</div>
+<span class="text-sm font-headline font-bold text-primary">90%</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary-container w-[90%] rounded-full shadow-[0_0_8px_rgba(79,70,229,0.5)]"></div>
+</div>
+</div>
+<div class="pl-4 space-y-3">
+<div class="flex items-center justify-between p-3 bg-surface-container-lowest/50 rounded-lg">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-sm text-on-surface">复合函数求导</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-3 bg-surface-container-lowest/50 rounded-lg">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary text-lg">pending</span>
+<span class="text-sm text-on-surface">两个重要极限</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Chapter 2 -->
+<div class="space-y-4">
+<div class="bg-surface-container-low p-5 rounded-xl">
+<div class="flex justify-between items-start mb-3">
+<div>
+<h4 class="font-semibold text-on-surface">第二章：导数与微分</h4>
+<p class="text-[10px] text-on-surface-variant mt-1">18 个知识点</p>
+</div>
+<span class="text-sm font-headline font-bold text-primary">65%</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary-container w-[65%] rounded-full"></div>
+</div>
+</div>
+<div class="pl-4 space-y-3">
+<div class="flex items-center justify-between p-3 bg-surface-container-lowest/50 rounded-lg border-l-2 border-error/30">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-error text-lg">report</span>
+<span class="text-sm text-on-surface">高阶导数概念</span>
+</div>
+<span class="text-[10px] font-bold text-error uppercase">Needs Focus</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Fixed Bottom CTA -->
+<div class="fixed bottom-0 left-0 w-full p-6 bg-gradient-to-t from-surface via-surface/95 to-transparent pt-12">
+<button class="w-full h-14 rounded-full bg-gradient-to-r from-primary-container to-secondary-container flex items-center justify-center gap-2 shadow-[0_10px_30px_rgba(79,70,229,0.4)] active:scale-[0.97] transition-all duration-200">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span class="font-headline font-bold text-white tracking-wide">开始今日复习</span>
+</button>
+</div>
+<!-- Background decorative element -->
+<div class="fixed top-1/4 -right-24 w-64 h-64 bg-secondary-container/10 blur-[100px] rounded-full -z-10"></div>
+<div class="fixed bottom-1/4 -left-24 w-64 h-64 bg-primary-container/10 blur-[100px] rounded-full -z-10"></div>
+</body></html>

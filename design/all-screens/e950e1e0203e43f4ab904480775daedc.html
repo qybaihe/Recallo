@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface": "#131316",
+              "surface-container-lowest": "#0e0e11",
+              "on-secondary-fixed-variant": "#5a00c6",
+              "secondary-fixed": "#eaddff",
+              "outline-variant": "#464555",
+              "on-secondary-fixed": "#25005a",
+              "surface-dim": "#131316",
+              "surface-container-highest": "#353438",
+              "tertiary-fixed-dim": "#ffb695",
+              "surface-container-low": "#1b1b1e",
+              "on-primary-container": "#dad7ff",
+              "outline": "#918fa1",
+              "primary-container": "#4f46e5",
+              "error-container": "#93000a",
+              "surface-bright": "#39393c",
+              "primary-fixed-dim": "#c3c0ff",
+              "primary-fixed": "#e2dfff",
+              "on-tertiary-fixed": "#351000",
+              "surface-container": "#1f1f22",
+              "tertiary-container": "#a44100",
+              "on-secondary": "#3f008e",
+              "error": "#ffb4ab",
+              "surface-container-high": "#2a2a2d",
+              "secondary-container": "#6001d1",
+              "on-surface": "#e4e1e6",
+              "on-background": "#e4e1e6",
+              "on-surface-variant": "#c7c4d8",
+              "background": "#131316",
+              "on-primary-fixed": "#0f0069",
+              "surface-tint": "#c3c0ff",
+              "tertiary-fixed": "#ffdbcc",
+              "surface-variant": "#353438",
+              "on-tertiary": "#571f00",
+              "inverse-on-surface": "#303033",
+              "primary": "#c3c0ff",
+              "inverse-surface": "#e4e1e6",
+              "inverse-primary": "#4d44e3",
+              "secondary-fixed-dim": "#d2bbff",
+              "tertiary": "#ffb695",
+              "on-primary-fixed-variant": "#3323cc",
+              "on-primary": "#1d00a5",
+              "on-error-container": "#ffdad6",
+              "on-secondary-container": "#c9aeff",
+              "on-tertiary-container": "#ffd2be",
+              "on-tertiary-fixed-variant": "#7b2f00",
+              "on-error": "#690005",
+              "secondary": "#d2bbff"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-effect {
+        background: rgba(19, 19, 22, 0.6);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+      .ghost-border {
+        border: 1px solid rgba(70, 69, 85, 0.15);
+      }
+      .ai-accent-border {
+        border-left: 2px solid #ffb695;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container/30">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full flex items-center justify-between px-6 h-16 bg-[#131316]/60 backdrop-blur-xl border-b border-[#E4E1E6]/15 z-50 shadow-[0px_20px_40px_rgba(0,0,0,0.4)]">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-gradient-to-br from-primary-container to-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-sm" style="font-variation-settings: 'FILL' 1;">psychology</span>
+</div>
+<h1 class="text-2xl font-bold bg-gradient-to-r from-[#4F46E5] to-[#6001D1] bg-clip-text text-transparent font-headline">Recallo</h1>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#4F46E5] cursor-pointer hover:opacity-80 transition-opacity active:scale-95 duration-200">auto_awesome</span>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-outline-variant/30">
+<img alt="User Profile" data-alt="close-up portrait of a young person in a minimalist studio setting with soft purple atmospheric lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDinRtwzPyP3wjdjvDOlhk9HY9yiLElRrhVyC7pU4Npb5gSzj6W6djQmVoSGA-XcElF1lef0QcSNgi9cqvsprHiutpqkZ5jqFznX5OUXZLNlnpd211NUuuuS4oiQALZs0rgS9ewV-6X8sSC4sFXPU5FfsH4gFURnEKB1_bFKw_yxDvMHiaEIry9qoLJbS8cCBQmn1Km6RryYKGrsD19eJ6NU3TwvwOJn0XUNqq43jBXDvQUHlIotcGuYXa88QXu57nXD7lISXSCfyU"/>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-40 px-6 max-w-2xl mx-auto space-y-8">
+<!-- AI Review Suggestion Card -->
+<section class="relative group">
+<div class="absolute -inset-0.5 bg-gradient-to-r from-primary-container/20 to-secondary-container/20 rounded-xl blur opacity-30"></div>
+<div class="relative bg-surface-container-low p-6 rounded-xl ghost-border overflow-hidden">
+<div class="flex justify-between items-start mb-6">
+<div>
+<span class="text-on-surface-variant text-xs font-medium tracking-widest uppercase mb-1 block">今日复习概览</span>
+<h2 class="text-2xl font-headline font-bold text-on-surface">准备好进入心流了吗？</h2>
+</div>
+<div class="bg-primary-container/10 px-3 py-1 rounded-full">
+<span class="text-primary text-sm font-semibold">12 个待复习</span>
+</div>
+</div>
+<div class="space-y-4">
+<div class="p-4 bg-surface-container-highest/40 rounded-lg ai-accent-border">
+<p class="text-on-surface leading-relaxed italic text-sm">
+                            “基于你的遗忘曲线，今天建议重点复习 <span class="text-tertiary font-semibold">量子力学基础概念</span>。你在这个章节的停留时间最长，需要巩固核心公式。”
+                        </p>
+</div>
+<div class="flex gap-3">
+<button class="flex-1 py-3 px-4 rounded-full bg-gradient-to-br from-primary-container to-secondary-container text-white font-semibold text-sm active:scale-[0.96] transition-transform shadow-lg shadow-primary-container/20">
+                            开始今日学习
+                        </button>
+<button class="px-4 rounded-full bg-surface-container-high/40 text-on-surface ghost-border text-sm font-medium active:scale-[0.96] transition-transform">
+                            查看统计
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Actions (Bento Style) -->
+<section class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container p-5 rounded-xl ghost-border hover:bg-surface-container-high transition-colors group cursor-pointer">
+<div class="w-10 h-10 rounded-lg bg-error-container/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-error">assignment_late</span>
+</div>
+<h3 class="font-semibold text-on-surface">错题解析</h3>
+<p class="text-xs text-on-surface-variant mt-1">AI 深度剖析薄弱点</p>
+</div>
+<div class="bg-surface-container p-5 rounded-xl ghost-border hover:bg-surface-container-high transition-colors group cursor-pointer">
+<div class="w-10 h-10 rounded-lg bg-primary-container/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary">edit_calendar</span>
+</div>
+<h3 class="font-semibold text-on-surface">计划调整</h3>
+<p class="text-xs text-on-surface-variant mt-1">智能优化学习路径</p>
+</div>
+</section>
+<!-- AI Chat/Explanation Area -->
+<section class="space-y-6">
+<div class="flex items-center gap-2 mb-4">
+<div class="h-px flex-1 bg-gradient-to-r from-transparent to-outline-variant/30"></div>
+<span class="text-[10px] text-outline uppercase tracking-[0.2em] px-2 font-semibold">AI 导师对话</span>
+<div class="h-px flex-1 bg-gradient-to-l from-transparent to-outline-variant/30"></div>
+</div>
+<!-- Message From AI -->
+<div class="flex gap-4 items-start">
+<div class="w-8 h-8 rounded-full bg-tertiary-container/20 flex items-center justify-center flex-shrink-0 mt-1">
+<span class="material-symbols-outlined text-tertiary text-lg" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+</div>
+<div class="bg-surface-container p-5 rounded-2xl rounded-tl-none ghost-border max-w-[90%] shadow-sm">
+<p class="text-on-surface leading-relaxed mb-4">
+                        关于你刚才问到的 **“间歇性重复” (Spaced Repetition)** 学习法，这里有三个核心逻辑：
+                    </p>
+<ul class="space-y-3">
+<li class="flex gap-3">
+<span class="text-primary font-bold">01.</span>
+<span class="text-sm text-on-surface-variant"><strong class="text-on-surface">对抗遗忘曲线：</strong> 利用 Ebbinghaus 曲线，在即将忘记的节点进行复习，可以最大限度提高记忆效率。</span>
+</li>
+<li class="flex gap-3">
+<span class="text-primary font-bold">02.</span>
+<span class="text-sm text-on-surface-variant"><strong class="text-on-surface">主动召回：</strong> 不只是阅读，而是通过测验或自我提问来提取信息，这会强化神经连接。</span>
+</li>
+<li class="flex gap-3">
+<span class="text-primary font-bold">03.</span>
+<span class="text-sm text-on-surface-variant"><strong class="text-on-surface">动态间隔：</strong> 随着熟悉度增加，复习的间隔时间（1天、3天、1周、1月）会呈指数级增长。</span>
+</li>
+</ul>
+<div class="mt-4 pt-4 border-t border-outline-variant/10 flex gap-2">
+<span class="px-2 py-1 bg-surface-container-highest rounded text-[10px] text-on-surface-variant">#认知心理学</span>
+<span class="px-2 py-1 bg-surface-container-highest rounded text-[10px] text-on-surface-variant">#学习技巧</span>
+</div>
+</div>
+</div>
+<!-- User Message Placeholder -->
+<div class="flex gap-4 items-start justify-end">
+<div class="bg-primary-container/20 p-4 rounded-2xl rounded-tr-none max-w-[80%] border border-primary-container/20 shadow-lg shadow-primary-container/5">
+<p class="text-sm text-on-primary-container">能帮我制定一个下周的数学复习计划吗？</p>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center flex-shrink-0 mt-1">
+<span class="material-symbols-outlined text-on-surface-variant text-lg">person</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Input Area -->
+<div class="fixed bottom-20 left-0 w-full px-6 py-4 z-40">
+<div class="max-w-2xl mx-auto flex items-center gap-3 bg-surface-container-lowest/80 backdrop-blur-xl p-2 rounded-full ghost-border shadow-[0px_10px_30px_rgba(0,0,0,0.5)]">
+<button class="w-10 h-10 flex items-center justify-center text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined">add_circle</span>
+</button>
+<input class="flex-1 bg-transparent border-none focus:ring-0 text-on-surface placeholder:text-outline/50 py-2 text-sm" placeholder="问问 Recallo..." type="text"/>
+<button class="w-10 h-10 flex items-center justify-center bg-gradient-to-br from-primary-container to-secondary-container rounded-full text-white shadow-lg shadow-primary-container/30 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">send</span>
+</button>
+</div>
+</div>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 h-20 bg-[#131316]/60 backdrop-blur-xl rounded-t-[2rem] border-t border-[#E4E1E6]/15 shadow-[0px_-10px_30px_rgba(0,0,0,0.3)]">
+<a class="flex flex-col items-center justify-center text-[#C7C4D8] p-2 hover:text-[#4F46E5] transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined text-[24px]">home</span>
+<span class="font-['Inter'] text-[12px] leading-[1.6]">首页</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#C7C4D8] p-2 hover:text-[#4F46E5] transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined text-[24px]">psychology</span>
+<span class="font-['Inter'] text-[12px] leading-[1.6]">复习</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-gradient-to-br from-[#4F46E5] to-[#6001D1] text-white rounded-full p-3 scale-110 -translate-y-2 shadow-lg shadow-[#4F46E5]/40 active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+<span class="font-['Inter'] text-[10px] leading-[1.6]">AI导师</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#C7C4D8] p-2 hover:text-[#4F46E5] transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined text-[24px]">settings</span>
+<span class="font-['Inter'] text-[12px] leading-[1.6]">设置</span>
+</a>
+</nav>
+</body></html>

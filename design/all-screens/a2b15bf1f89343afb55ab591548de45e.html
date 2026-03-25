@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Recallo AI 学习助手</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary-fixed": "#0f0069",
+              "on-error": "#690005",
+              "secondary-container": "#6001d1",
+              "error": "#ffb4ab",
+              "surface-container-high": "#2a2a2d",
+              "inverse-surface": "#e4e1e6",
+              "surface-variant": "#353438",
+              "surface": "#131316",
+              "secondary": "#d2bbff",
+              "on-tertiary-fixed": "#351000",
+              "on-secondary-container": "#c9aeff",
+              "on-surface-variant": "#c7c4d8",
+              "tertiary-fixed": "#ffdbcc",
+              "secondary-fixed-dim": "#d2bbff",
+              "on-secondary-fixed-variant": "#5a00c6",
+              "on-error-container": "#ffdad6",
+              "primary-fixed-dim": "#c3c0ff",
+              "on-tertiary": "#571f00",
+              "primary-container": "#4f46e5",
+              "inverse-primary": "#4d44e3",
+              "inverse-on-surface": "#303033",
+              "tertiary-fixed-dim": "#ffb695",
+              "on-secondary": "#3f008e",
+              "surface-dim": "#131316",
+              "surface-container-highest": "#353438",
+              "on-tertiary-container": "#ffd2be",
+              "primary-fixed": "#e2dfff",
+              "tertiary": "#ffb695",
+              "on-primary-container": "#dad7ff",
+              "on-secondary-fixed": "#25005a",
+              "error-container": "#93000a",
+              "secondary-fixed": "#eaddff",
+              "surface-container-lowest": "#0e0e11",
+              "on-primary": "#1d00a5",
+              "background": "#131316",
+              "surface-container-low": "#1b1b1e",
+              "on-surface": "#e4e1e6",
+              "outline-variant": "#464555",
+              "on-background": "#e4e1e6",
+              "outline": "#918fa1",
+              "surface-tint": "#c3c0ff",
+              "primary": "#c3c0ff",
+              "on-primary-fixed-variant": "#3323cc",
+              "tertiary-container": "#a44100",
+              "surface-bright": "#39393c",
+              "on-tertiary-fixed-variant": "#7b2f00",
+              "surface-container": "#1f1f22"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(27, 27, 30, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(228, 225, 230, 0.1);
+        }
+        .ai-gradient-bg {
+            background: linear-gradient(135deg, #4F46E5 0%, #6001D1 100%);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #131316;
+            color: #e4e1e6;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body selection:bg-primary-container selection:text-white">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#131316]/60 backdrop-blur-xl shadow-[0px_20px_40px_rgba(0,0,0,0.4)] bg-gradient-to-b from-indigo-500/10 to-transparent">
+<div class="flex justify-between items-center px-6 h-16 w-full max-w-5xl mx-auto">
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-white/5 transition-colors active:scale-95 transition-transform rounded-full">
+<span class="material-symbols-outlined text-indigo-400">menu</span>
+</button>
+<h1 class="font-['Manrope'] font-semibold tracking-tight text-lg text-white">AI 学习助手</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 hover:bg-white/5 transition-colors active:scale-95 transition-transform rounded-full">
+<span class="material-symbols-outlined text-indigo-400">account_circle</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-4 max-w-2xl mx-auto space-y-8">
+<!-- AI Review Insights & Recommendations -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- AI Review Recommendations -->
+<div class="glass-panel p-6 rounded-3xl relative overflow-hidden group border-l-2 border-l-tertiary">
+<div class="flex items-center justify-between mb-4">
+<span class="text-xs font-bold text-tertiary tracking-widest uppercase">复习建议</span>
+<span class="material-symbols-outlined text-tertiary text-lg">insights</span>
+</div>
+<h3 class="text-on-surface font-headline font-semibold text-lg mb-2">遗忘曲线预警</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-4">根据你的学习记忆轨迹，今天建议重点突破：</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 rounded-full bg-surface-container-highest text-primary-fixed text-xs font-medium">线性代数</span>
+<span class="px-3 py-1.5 rounded-full bg-surface-container-highest text-primary-fixed text-xs font-medium">英语听力</span>
+</div>
+</div>
+<!-- Error Questions Portal -->
+<div class="glass-panel p-6 rounded-3xl flex flex-col justify-between hover:bg-surface-container-high transition-all cursor-pointer group">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-2xl bg-error-container flex items-center justify-center">
+<span class="material-symbols-outlined text-error">assignment_late</span>
+</div>
+<div>
+<p class="text-error font-bold text-xl">5 道</p>
+<p class="text-on-surface-variant text-xs">新错题待解析</p>
+</div>
+</div>
+<div class="mt-4 flex items-center text-xs font-medium text-on-surface group-hover:translate-x-1 transition-transform">
+                    立即处理 <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+</div>
+</div>
+</section>
+<!-- Learning Plan Adjustment -->
+<section class="glass-panel p-5 rounded-2xl flex items-center gap-4 bg-gradient-to-r from-surface-container-low to-surface-container-lowest">
+<div class="w-12 h-12 rounded-full ai-gradient-bg flex items-center justify-center shadow-lg shadow-indigo-500/20">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+</div>
+<div class="flex-1">
+<p class="text-on-surface text-sm leading-relaxed">
+<span class="font-bold text-indigo-400">Recallo AI</span> 建议将明天的学习时间延长 <span class="text-tertiary font-bold">20 分钟</span>，以覆盖新增的知识考点。
+                </p>
+</div>
+</section>
+<!-- Conversation Area -->
+<section class="space-y-6">
+<!-- User Message -->
+<div class="flex justify-end">
+<div class="max-w-[85%] bg-surface-container-high px-5 py-3 rounded-2xl rounded-tr-none text-on-surface text-sm shadow-sm">
+                    帮我总结一下今天线性代数关于“矩阵秩”的核心知识点。
+                </div>
+</div>
+<!-- AI Message -->
+<div class="flex justify-start items-start gap-3">
+<div class="w-8 h-8 rounded-full ai-gradient-bg flex items-center justify-center shrink-0 mt-1">
+<span class="material-symbols-outlined text-[18px] text-white">psychology</span>
+</div>
+<div class="max-w-[85%] ai-gradient-bg p-[1px] rounded-2xl rounded-tl-none shadow-[0px_10px_30px_rgba(79,70,229,0.3)]">
+<div class="bg-[#131316]/90 backdrop-blur-md p-5 rounded-2xl rounded-tl-none">
+<p class="text-on-surface text-sm leading-relaxed mb-4">
+                            没问题！关于<span class="text-indigo-400 font-bold">矩阵的秩 (Rank)</span>，你应该掌握以下三个核心维度：
+                        </p>
+<ul class="space-y-3">
+<li class="flex items-start gap-2 text-on-surface-variant text-sm">
+<span class="text-indigo-400 mt-1">•</span>
+<span><strong>最高阶非零子式：</strong> 秩是矩阵中非零子式的最高阶数。</span>
+</li>
+<li class="flex items-start gap-2 text-on-surface-variant text-sm">
+<span class="text-indigo-400 mt-1">•</span>
+<span><strong>线性无关性：</strong> 秩等于矩阵行向量（或列向量）极大线性无关组的大小。</span>
+</li>
+<li class="flex items-start gap-2 text-on-surface-variant text-sm">
+<span class="text-indigo-400 mt-1">•</span>
+<span><strong>解的判定：</strong> 在系数矩阵中，秩决定了线性方程组是否有解及解的情况。</span>
+</li>
+</ul>
+<div class="mt-4 pt-4 border-t border-white/10 flex gap-2">
+<button class="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-xs text-on-surface-variant transition-colors">生成思维导图</button>
+<button class="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-xs text-on-surface-variant transition-colors">查看关联错题</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Secondary User Intent -->
+<div class="flex justify-end">
+<div class="max-w-[85%] bg-surface-container-high px-5 py-3 rounded-2xl rounded-tr-none text-on-surface text-sm shadow-sm">
+                    能把刚才提到的“解的判定”详细展开说说吗？
+                </div>
+</div>
+</section>
+</main>
+<!-- Floating Bottom Input & Navigation Shell -->
+<div class="fixed bottom-0 w-full z-50">
+<!-- Floating Chat Input -->
+<div class="max-w-2xl mx-auto px-4 pb-4">
+<div class="glass-panel rounded-full p-2 flex items-center gap-2 shadow-[0px_10px_30px_rgba(0,0,0,0.5)] border border-white/10 ring-1 ring-white/5 ring-inset">
+<button class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:text-white transition-colors">
+<span class="material-symbols-outlined">add</span>
+</button>
+<input class="flex-1 bg-transparent border-none focus:ring-0 text-on-surface placeholder:text-on-surface-variant/50 text-sm py-2" placeholder="向 Recallo AI 提问..." type="text"/>
+<button class="w-10 h-10 rounded-full ai-gradient-bg flex items-center justify-center text-white shadow-lg shadow-indigo-600/40 active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">send</span>
+</button>
+</div>
+</div>
+<!-- BottomNavBar -->
+<nav class="bg-[#131316]/60 backdrop-blur-xl rounded-t-3xl border-t border-white/15 shadow-[0px_-10px_30px_rgba(0,0,0,0.5)]">
+<div class="flex justify-around items-center h-20 px-4 pb-safe w-full">
+<!-- Learning Tab -->
+<a class="flex flex-col items-center justify-center text-[#C7C4D8] px-4 py-2 hover:text-white transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined mb-1">auto_stories</span>
+<span class="font-['Inter'] text-[10px] font-medium leading-[1.6]">学习</span>
+</a>
+<!-- Library Tab -->
+<a class="flex flex-col items-center justify-center text-[#C7C4D8] px-4 py-2 hover:text-white transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined mb-1">e911_emergency</span>
+<span class="font-['Inter'] text-[10px] font-medium leading-[1.6]">库</span>
+</a>
+<!-- AI Assistant Tab (Active) -->
+<a class="flex flex-col items-center justify-center bg-gradient-to-br from-[#4F46E5] to-[#6001D1] text-white rounded-2xl px-5 py-2 scale-110 active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">psychology</span>
+<span class="font-['Inter'] text-[10px] font-medium leading-[1.6]">AI助手</span>
+</a>
+<!-- Settings Tab -->
+<a class="flex flex-col items-center justify-center text-[#C7C4D8] px-4 py-2 hover:text-white transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined mb-1">settings</span>
+<span class="font-['Inter'] text-[10px] font-medium leading-[1.6]">设置</span>
+</a>
+</div>
+</nav>
+</div>
+</body></html>
